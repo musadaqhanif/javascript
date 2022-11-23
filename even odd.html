@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 3</title>
+</head>
+<body>
+    
+    <form onsubmit="per();return false;" class="form1">
+    <label for="enter number">Enter Number:</label>
+    <input type="number" id="musadaq" placeholder="Enter Number" class="input1">
+    <br>
+    <button type="submit"  class="button">Submit</button>
+    </form>
+    <h1 id="MIAN" class="heading1"></h1>
+    <p class="para1">NOTE:(If Remainder is "1" then number is "odd" other wise even)</p>
+<style>   
+    .form1{
+        margin-top: 30vh;
+        margin-left: 70vh;
+    } 
+    .para1{
+        margin-top: 10vh;
+        margin-left: 45vh;
+    }   
+    .heading1{
+        margin-left: 71vh;
+    }  
+    body{
+        background-color: hsl(250, 84%, 10%);
+        font-size: 30px;
+        color:rgb(30, 251, 15) ;
+    }  
+    .button{
+        height: 50px;
+        width: 400px;
+        margin-top: 20px;
+        font-size: 20px;
+    } 
+    .button:hover{
+        background-color: black;
+        color:rgb(30, 251, 15) ;
+    }
+    .input1{
+        width: 190px;
+        padding: 10px;
+           }
+</style>
+    <script>
+        function per() {
+            let mian = document.querySelector("#musadaq").value;
+            result = mian%2;
+            document.querySelector("#MIAN").innerHTML= "Remainder is" + " " +result;
+        }
+    </script>
+</body>
+</html>

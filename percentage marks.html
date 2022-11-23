@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Percentage calculator:</h2>
+    <form onsubmit="Percentage(); return false;">
+
+        <label for="totalMarks">Total Mark</label>
+        <input type="number" min="1" required id="totalMarks" placeholder="Enter your total marks">
+        <br>
+
+        <label for="marksObtained">Obtained Mark</label>
+        <input type="number" min="1" required id="marksObtained" placeholder="Enter your obtained marks">
+        <br>
+
+        <button type="submit">Calculate</button>
+
+    </form>
+
+    <h1 id="result"></h1>
+
+
+    <script>
+        function Percentage() {
+            let totalMarks = document.querySelector("#totalMarks").value;
+            let marksObtained = document.querySelector("#marksObtained").value;
+            totalMarks = Number(totalMarks)
+            marksObtained = Number(marksObtained)
+            let result = marksObtained * 100 / totalMarks;
+            // document.querySelector("#result").innerHTML = "you have got " + result + "%"; //es5
+            document.querySelector("#result").innerHTML = `Your percentage is ${result}%`; //es6 string templating
+        }
+    </script>
+</body>
+</html>
