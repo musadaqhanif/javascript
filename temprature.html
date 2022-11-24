@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temprature</title>
+</head>
+
+<body>
+
+    <h1>Temprature App</h1>
+    <form onsubmit="temprature();return false;">
+        <label for="temp">Enter Temprature:</label>
+        <input type="number" id="temp" placeholder="Enter Temprature">
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <h1 id="result"></h1>
+    <script>
+        function temprature() {
+            let temp = document.querySelector("#temp").value;
+            if (temp < 20) {
+                document.querySelector("#result").innerHTML = "IT'S Too Cold plz wear jacket";
+            }
+            else if (temp > 20) {
+                document.querySelector("#result").innerHTML = "IT'S  Cold a little bit";
+            }
+            else if (temp > 30) {
+                document.querySelector("#result").innerHTML = "IT'S  hot a little bit";
+            }
+            else if (temp > 40) {
+                document.querySelector("#result").innerHTML = "IT'S very hot use cold water";
+            }
+            else if (temp > 50) {
+                document.querySelector("#result").innerHTML = "IT'S  too hot plz stay at home";
+            }
+            else {
+                document.querySelector("#result").innerHTML = "It's normal outside";
+            }
+
+        }
+    </script>
+</body>
+
+</html>
